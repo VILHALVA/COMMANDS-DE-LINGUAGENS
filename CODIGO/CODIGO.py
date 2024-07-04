@@ -2,24 +2,19 @@ import discord
 from discord.ext import commands
 from TOKEN import TOKEN
 
-# Define os intents que seu bot vai usar
 intents = discord.Intents.default()
-intents.messages = True  # Permitir leitura de mensagens
+intents.messages = True  
 
-# Cria o objeto do bot com os intents definidos
 bot = commands.Bot(command_prefix='!', intents=intents)
 
-# Evento que dispara quando o bot está pronto
 @bot.event
 async def on_ready():
     print(f'Bot conectado como {bot.user}')
 
-# Comando de exemplo
 @bot.command()
 async def ping(ctx):
     await ctx.send('Pong!')
 
-# Comando para exibir informações sobre linguagens de programação
 @bot.command()
 async def linguagens(ctx):
     linguagens_info = """
@@ -34,7 +29,6 @@ async def linguagens(ctx):
     """
     await ctx.send(linguagens_info)
 
-# Comandos específicos para cada linguagem de programação
 @bot.command()
 async def python(ctx):
     info_python = "Python é uma linguagem de programação poderosa e fácil de aprender."
@@ -65,5 +59,4 @@ async def php(ctx):
     info_php = "PHP é uma linguagem de programação amplamente usada em desenvolvimento web."
     await ctx.send(info_php)
 
-# Inicia o bot
 bot.run(TOKEN)
