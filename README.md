@@ -25,13 +25,20 @@ Este bot Discord foi desenvolvido para fornecer informações simples sobre dive
 1. **Editar o código:**
    - Certifique-se de substituir `seu_token_aqui` pelas informações corretas das suas credenciais em `CODIGO/TOKEN.py`.
 
-2. **Inicie o Bot:**
+2. **Instalando as dependências:**
+   - Antes de executar o aplicativo, certifique-se de instalar todas as dependências necessárias. No terminal, execute o seguinte comando para instalar as dependências listadas no arquivo `requirements.txt` no diretório: `CODIGO`:
+   ```bash
+   pip install -r requirements.txt
+   ```
+   - Isso instruirá o pip a ler o arquivo requirements.txt e instalar todas as dependências listadas.
+
+3. **Inicie o Bot:**
    - Execute o bot do Discord iniciando-o com o seguinte comando no diretório `CODIGO`:
     ```bash
     python CODIGO.py
     ```
 
-3. **Interagindo com o Bot no Discord:**
+4. **Interagindo com o Bot no Discord:**
    - **Comando `!ping`:**
      - Digite `!ping` em qualquer canal de texto onde o bot está presente.
      - O bot responderá com "Pong!" para indicar que está online e funcionando.
